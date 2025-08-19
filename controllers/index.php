@@ -40,4 +40,4 @@ function sum($carry, $item) {
 
 $total = array_reduce($subtotals, "sum");
 
-require "create.view.php";
+require "views/index.view.php";

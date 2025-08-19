@@ -18,3 +18,39 @@ th {
 .right {
     text-align: right;
 }
+
+.active {
+    font-weight: bold;
+}
+
+nav {
+    background-color: #75807c;
+    padding: 10px;
+    text-align: left;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+form {
+    display: grid;
+    max-width: 400px;
+}
+
+label {
+    text-align: left;
+    line-height: 2;
+}
+
+input {
+    padding: 5px;  
+}
