@@ -12,7 +12,7 @@
     </thead>
     <tbody>
 
-        <?php foreach ($products as $product) : ?> 
+        <?php foreach ($groceries as $product) : ?> 
             <?=
                 "<tr>",
                     "<td>" . $product["name"] . "</td>",

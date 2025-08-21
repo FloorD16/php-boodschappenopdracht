@@ -1,35 +1,20 @@
 <?php
 
-$products = [
-    "product1" => [
-        "name" => "Rijst",
-        "price" => 1.00,
-        "quantity" => 1
-    ],
-    "product2" => [
-        "name" => "Broccoli",
-        "price" => 0.99,
-        "quantity" => 2
-    ],
-    "product3" => [
-        "name" => "Koekjes",
-        "price" => 1.20,
-        "quantity" => 4
-    ],
-    "product4" => [
-        "name" => "Noten",
-        "price" => 2.99,
-        "quantity" => 0
-    ]
-];
+require "Database.php";
 
-foreach ($products as $key => $product) {
-    $products[$key]["subtotal"] = $product["price"] * $product["quantity"];
+$config = require("config.php");
+
+$db = new Database($config);
+
+$groceries = $db->query("select * from groceries")->fetchAll();
+
+foreach ($groceries as $key => $product) {
+    $groceries[$key]["subtotal"] = $product["price"] * $product["quantity"];
 }
 
 $subtotals = [];
 
-foreach ($products as $product) {
+foreach ($groceries as $product) {
     $subtotals[] = $product['subtotal'];
 }
 
