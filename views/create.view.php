@@ -9,7 +9,7 @@
     <input type="number" id="quantity" name="quantity">
     <br>
     <label for="price">Prijs product:</label>
-    <input type="number" id="price" name="price">
+    <input type="number" step="any" id="price" name="price">
     <br><br>
     <button type='submit'>Voeg toe</button>
 </form>

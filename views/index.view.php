@@ -15,10 +15,10 @@
         <?php foreach ($groceries as $product) : ?> 
             <?=
                 "<tr>",
-                    "<td>" . $product["name"] . "</td>",
-                    "<td class=right>" . number_format($product["price"], 2) . "</td>",
+                    "<td>" . htmlspecialchars($product["name"]) . "</td>",
+                    "<td class=right>" . htmlspecialchars(number_format($product["price"], 2)) . "</td>",
                     "<td>" . $product["quantity"] . "</td>",
-                    "<td class=right>" . number_format($product["subtotal"], 2) . "</td>",
+                    "<td class=right>" . htmlspecialchars(number_format($product["subtotal"], 2)) . "</td>",
                 "</tr>";  
             ?>
         <?php endforeach; ?>
