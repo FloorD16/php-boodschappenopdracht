@@ -13,12 +13,10 @@ class Validator {
     }
 
     public static function decimal($value, $min, $max) {
-        $decimalCount;
+        $decimalCount = 0;
 
         if (strpos($value, '.') !== false) {
-            $decimalCount = strlen(explode('.', $number)[1]);
-        } else {
-            $decimalCount = 0;
+            $decimalCount = strlen(explode('.', $value)[1]);
         }
 
         return $decimalCount >= $min && $decimalCount <= $max;
